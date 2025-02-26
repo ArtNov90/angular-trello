@@ -25,14 +25,16 @@ export class BoardComponent {
         id: 2, 
         title: 'En cours', 
         tasks: [
-          { id: 3, title: 'Coder une app', description: 'Finir le projet Angular' }
+          { id: 3, title: 'Coder une app', description: 'Finir le projet Angular' },
+          { id: 4, title: 'Coder un projet perso', description: 'Commener "Pojet JV"' }
         ] 
       },
       { 
         id: 3, 
         title: 'Terminé', 
         tasks: [
-          { id: 4, title: 'Lire un livre', description: 'Terminé "Clean Code"' }
+          { id: 5, title: 'Lire un livre', description: 'Terminé "Clean Code"' },
+          { id: 5, title: 'Voir un film', description: 'Terminé "Civil War"' },
         ] 
       }
     ]
