@@ -1,6 +1,7 @@
 <div class="board">
-    <h2>{{ board.title }}</h2>
-    <div class="lists">
-      <app-list *ngFor="let list of board.lists" [list]="list"></app-list>
-    </div>
-  </div>
+  <h1>Mon Trello</h1>
+
+  <app-list title="À faire"></app-list>
+  <app-list title="En cours"></app-list>
+  <app-list title="Terminé"></app-list>
+</div>

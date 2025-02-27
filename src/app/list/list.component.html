@@ -1,6 +1,27 @@
 <div class="list">
-    <h3>{{ list.title }}</h3>
-    <div class="tasks">
-      <app-task *ngFor="let task of list.tasks" [task]="task"></app-task>
-    </div>
-  </div>
+  <h3>{{ title }}</h3> <!-- Affichage du titre de la liste -->
+
+  <!-- Champs pour ajouter une nouvelle tâche -->
+  <input
+    type="text"
+    placeholder="Titre de la tâche"
+    [ngModel]="newTaskTitle()"
+    (ngModelChange)="newTaskTitle.set($event)"
+  >
+  <input
+    type="text"
+    placeholder="Description"
+    [ngModel]="newTaskDescription()"
+    (ngModelChange)="newTaskDescription.set($event)"
+  >
+  <button (click)="addTask()">Ajouter</button>
+
+  <!-- Affichage des tâches -->
+  <ul>
+    <li *ngFor="let task of taskList()">
+      <strong>{{ task.title }}</strong>: {{ task.description }}
+      <button (click)="removeTask(task.id)">❌</button>
+    </li>
+  </ul>
+</div>
+
